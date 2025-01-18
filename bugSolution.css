@@ -1,0 +1,11 @@
+The solution is to avoid the problematic use of `calc()` with mixed percentage and pixel values when the parent container's width is not fixed or is also calculated dynamically. Here's an example using viewport units (vw) as a more robust alternative:
+
+```css
+.container {
+  width: 40vw;
+  /* Adjust 40vw as needed to match the desired percentage of the viewport */
+  margin: 10px;
+}
+```
+
+This approach removes the dependency on the parent container's percentage-based width and provides predictable results across different screen sizes.  For more complex scenarios, consider using media queries or JavaScript for more precise control.
